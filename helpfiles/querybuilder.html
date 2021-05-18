@@ -1,0 +1,80 @@
+<div>
+    <h3> Writing search queries </h3>
+    <hr class="mb-3">
+
+    <p>A search query is a combination of one or more conditions</p>
+
+    <div>
+        A condition consists of 3 parts:
+        <span class="small">
+            <span class="alert-info pl-2 pr-2 mr-2">[FIELD NAME]</span>
+            <span class="alert-warning pl-2 pr-2 mr-2">OPERATOR</span>
+            <span class="alert-primary pl-2 pr-2">&lt;VALUE&gt;</span>
+        </span>
+    </div>
+    <i>E.g.</i>
+    <pre class="alert bg-light">
+<span class="alert-info">[Durability]</span> <span class="alert-warning pl-2 pr-2">&gt;</span> <span class="alert-primary pl-2 pr-2">60</span> </pre>
+
+    <div>
+        Multiple such conditions can be combined by using
+        <i class="small">
+            <span class="alert-warning">AND</span> /
+            <span class="alert-warning">OR</span>
+        </i> connectors.
+    </div>
+
+    <i>E.g.</i>
+    <pre class="alert bg-light">
+[Durability] &gt; 60 <span class="alert-warning pl-2 pr-2">AND</span> [Momentum] &gt; 50</pre>
+
+    <div>
+        <b>Note:</b> you can write complex queries by grouping multiple such queries using brackets.
+        <i class="small">
+            <span class="alert-warning pl-2 pr-2 mr-2">(</span>
+            <span class="alert-warning pl-2 pr-2">)</span>
+        </i>
+    </div>
+    <i>E.g.</i>
+    <pre class="alert bg-light">
+<span class="alert-warning pl-2 pr-2">(</span> [Durability] &gt; 60 <i>AND</i> [Momentum] &gt; 50 <span class="alert-warning pl-2 pr-2">)</span> <i>OR</i>
+<span class="alert-warning pl-2 pr-2">(</span> [Momentum] &gt; 40 <i>AND</i> [Momentum] &lt; 70 <span class="alert-warning pl-2 pr-2">)</span></pre>
+
+    <p class="mt-5">Below is a lookup of all supported fields, operators and connectors</p>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <h5>Fields</h5>
+            <ul>
+                <li>Durability</li>
+                <li>Valuation</li>
+                <li>Momentum</li>
+                <li>Strength</li>
+                <li>Opportunity</li>
+                <li>Weakness</li>
+                <li>Threat</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h5>Operators</h5>
+                <div class="badge badge-light mr-2 h6">*</div>
+                <div class="badge badge-light mr-2 h6">/</div>
+                <div class="badge badge-light mr-2 h6">+</div>
+                <div class="badge badge-light mr-2 h6">-</div>
+                <div class="badge badge-light mr-2 h6">&lt;</div>
+                <div class="badge badge-light mr-2 h6">&gt;</div>
+                <div class="badge badge-light mr-2 h6">&lt;=</div>
+                <div class="badge badge-light mr-2 h6">&lt;=</div>
+                <div class="badge badge-light mr-2 h6">=</div>
+            </div>
+
+            <h5>Connectors</h5>
+            <ul class="list-unstyled">
+                <li><b>AND</b>: All conditions should satisfy to yield results</li>
+                <li><b>OR</b>: Any one condition should satisfy to yield results</li>
+            </ul>
+        </div>
+    </div>
+</div>
